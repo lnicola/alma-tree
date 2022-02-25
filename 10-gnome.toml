@@ -1,0 +1,7 @@
+packages = ["gnome-desktop", "gdm", "gnome-terminal", "gnome-control-center"]
+script = """
+set -exu
+
+echo -e "[device]\nwifi.backend=iwd" > /etc/NetworkManager/conf.d/wifi_backend.conf
+systemctl enable gdm
+"""
